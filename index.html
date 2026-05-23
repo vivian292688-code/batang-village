@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>擺塘村數位導覽平台｜Batang Village Digital Guide</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", Arial, sans-serif;
+      color: #2f2f2f;
+      background: #faf7f0;
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(rgba(58, 45, 32, 0.45), rgba(58, 45, 32, 0.45)),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80") center/cover;
+      color: white;
+      min-height: 430px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header h1 {
+      font-size: 46px;
+      margin: 0 0 12px;
+      letter-spacing: 2px;
+    }
+    header p {
+      font-size: 20px;
+      margin: 0;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #6f4e37;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 12px;
+      gap: 16px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+    }
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .section-title h2 {
+      font-size: 32px;
+      color: #5b3f2f;
+      margin: 0;
+    }
+    .section-title p {
+      color: #777;
+      margin-top: 6px;
+    }
+    .intro {
+      background: white;
+      padding: 32px;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
+    }
+    .card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+      transition: transform 0.25s ease;
+    }
+    .card:hover { transform: translateY(-6px); }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 20px;
+    }
+    .card h3 {
+      margin: 0 0 8px;
+      color: #5b3f2f;
+    }
+    .tag {
+      display: inline-block;
+      background: #efe2cf;
+      color: #6f4e37;
+      padding: 4px 10px;
+      border-radius: 99px;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+    .route {
+      background: #fff;
+      border-left: 6px solid #8a5a44;
+      padding: 22px 26px;
+      border-radius: 16px;
+      margin-bottom: 18px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+    }
+    th, td {
+      padding: 16px;
+      border-bottom: 1px solid #eee;
+      text-align: left;
+    }
+    th {
+      background: #6f4e37;
+      color: white;
+    }
+    footer {
+      background: #4a382d;
+      color: white;
+      text-align: center;
+      padding: 36px 20px;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 22px;
+      padding: 12px 24px;
+      background: #8a5a44;
+      color: white;
+      text-decoration: none;
+      border-radius: 99px;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <header id="home">
+    <h1>擺塘村數位導覽平台</h1>
+    <p>Batang Village Digital Guide</p>
+    <p>慢遊擺塘，遇見葡萄、信仰與鄉村生活</p>
+    <a href="#attractions" class="button">開始探索 Explore</a>
+  </header>
+
+  <nav>
+    <a href="#about">關於擺塘 About</a>
+    <a href="#attractions">景點導覽 Attractions</a>
+    <a href="#market">市集資訊 Market</a>
+    <a href="#route">遊程推薦 Route</a>
+    <a href="#contact">聯絡我們 Contact</a>
+  </nav>
+
+  <section id="about">
+    <div class="section-title">
+      <h2>關於擺塘｜About Batang</h2>
+      <p>地方故事、農村生活與文化記憶的匯集</p>
+    </div>
+    <div class="intro">
+      <p>擺塘村是一處融合農業特色、地方信仰與鄉村生活記憶的聚落。本網站以數位導覽方式整合在地景點、寺廟文化、農產特色與市集資訊，讓居民與遊客能更深入認識地方故事，發現擺塘村的日常之美。</p>
+    </div>
+  </section>
+
+  <section id="attractions">
+    <div class="section-title">
+      <h2>景點導覽｜Attractions</h2>
+      <p>從信仰文化到田園風景，探索擺塘村的地方魅力</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1589802829985-817e51171b92?auto=format&fit=crop&w=800&q=80" alt="Temple" />
+        <div class="card-content">
+          <span class="tag">Temple Tour</span>
+          <h3>廟宇巡禮</h3>
+          <p>介紹在地廟宇、主祀神明、信仰故事與節慶活動，展現居民共同守護的精神中心。</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1473773508845-188df298d2d1?auto=format&fit=crop&w=800&q=80" alt="Rural landscape" />
+        <div class="card-content">
+          <span class="tag">Rural Landscape</span>
+          <h3>鄉村風光</h3>
+          <p>收錄葡萄園、田園小徑與聚落景觀，呈現自然、慢活與農村日常。</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=800&q=80" alt="Local highlights" />
+        <div class="card-content">
+          <span class="tag">Local Highlights</span>
+          <h3>地方特色</h3>
+          <p>整理社區公園、廟前廣場、地方聚會空間與生活據點，呈現村落活力。</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=80" alt="Farm experience" />
+        <div class="card-content">
+          <span class="tag">Farm Experience</span>
+          <h3>農遊體驗</h3>
+          <p>以葡萄產業為核心，介紹農產、加工品、採果活動與在地農村體驗。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="market">
+    <div class="section-title">
+      <h2>市集資訊｜Market Info</h2>
+      <p>以居民交流與地方需求為基礎的生活型市集</p>
+    </div>
+    <table>
+      <tr>
+        <th>空間 Space</th>
+        <th>功能定位 Function</th>
+        <th>適合活動 Activities</th>
+      </tr>
+      <tr>
+        <td>新建公園</td>
+        <td>大型假日市集</td>
+        <td>表演活動、休憩空間、農產展售</td>
+      </tr>
+      <tr>
+        <td>廟前廣場</td>
+        <td>節慶文化市集</td>
+        <td>夜間市集、祈福活動、文化展演</td>
+      </tr>
+      <tr>
+        <td>社區發展協會周邊</td>
+        <td>平日小型市集</td>
+        <td>居民交流、農產品販售、生活服務</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="route">
+    <div class="section-title">
+      <h2>遊程推薦｜Travel Route</h2>
+      <p>適合遊客與居民共同參與的慢遊路線</p>
+    </div>
+    <div class="route">
+      <h3>半日遊 Half-Day Trip</h3>
+      <p>廟宇巡禮 → 葡萄園景觀 → 社區市集 → 鄉村小徑散步</p>
+    </div>
+    <div class="route">
+      <h3>一日遊 One-Day Trip</h3>
+      <p>地方信仰文化 → 農遊體驗 → 午餐／農產展售 → 市集活動 → 拍照景點</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-title">
+      <h2>聯絡我們｜Contact</h2>
+      <p>歡迎認識擺塘村，探索更多地方故事</p>
+    </div>
+    <div class="intro">
+      <p>若有活動合作、導覽需求或地方資訊補充，歡迎與社區單位聯繫。</p>
+      <p>Email：example@gmail.com｜Phone：04-0000-0000</p>
+      <a class="button" href="https://www.google.com/maps" target="_blank">查看地圖 View Map</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 擺塘村數位導覽平台 Batang Village Digital Guide</p>
+  </footer>
+</body>
+</html>
